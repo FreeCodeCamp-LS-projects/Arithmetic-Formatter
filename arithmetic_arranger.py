@@ -10,10 +10,8 @@ def arithmetic_arranger(problems, result=False):
 #Condition 1: Not more than 5 operations
   if len(problems) > 5 :
     return "Error: Too many problems."
-    #sys.exit(0)
   else:
     pass
-#    print ("son: ", len(problems), 'operaciones')
 
 
 #Condition 2: Only numbers?
@@ -23,13 +21,12 @@ def arithmetic_arranger(problems, result=False):
     s = i.split(' ')
     if (s[0].isdigit() is False) or (s[2].isdigit() is False):
         return "Error: Numbers must only contain digits."
-        #sys.exit(0)
 
 #Condition 3: Number should be not higher than 9999
 
     if (int(s[0]) > 9999) or (int(s[2]) > 9999):
         return "Error: Numbers cannot be more than four digits."
-        #sys.exit(0)
+
 #Condition 4: only + or -
 
     if (s[1].find("+")) != -1 or (s[1].find("-")) != -1:
@@ -83,5 +80,3 @@ def arithmetic_arranger(problems, result=False):
 
   else:
       return lin1 + lin2 + lin3
-
-#return arranged_problems
